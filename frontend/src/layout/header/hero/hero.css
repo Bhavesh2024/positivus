@@ -1,0 +1,76 @@
+.hero-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.hero-content {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.hero-illustrate-container {
+	width: 40%;
+}
+
+.hero-illustrate {
+	/* height: 400px; */
+	object-fit: cover;
+	width: 100%;
+}
+
+.hero-content-headline {
+	font-weight: 545;
+	font-size: 2.32rem;
+	width: 100%;
+}
+.book-consultation-btn {
+	padding: 15px 20px;
+	width: fit-content;
+	border-radius: 10px;
+	color: white;
+	background-color: var(--dark);
+	border: 1px solid;
+}
+.hero-content-intro {
+	font-size: 13px;
+}
+
+.brands-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 20px;
+	margin: 30px 0;
+	margin-bottom: 50px;
+}
+.brand-image {
+	width: 80px;
+}
+/* mobile */
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+	.hero-container {
+		flex-direction: column-reverse;
+		position: relative;
+	}
+	.hero-content,
+	.hero-illustrate-container {
+		width: 100%;
+	}
+	/* .hero-illustrate {
+		margin-top: 140px;
+	} */
+
+	.hero-content-headline {
+		font-size: 2rem;
+		width: 100%;
+	}
+	.book-consultation-btn {
+		width: 100%;
+	}
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
