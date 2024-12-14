@@ -8,19 +8,19 @@
 	width: 120px;
 }
 
-.nav-menu-container {
+.menu-list-container {
 	display: flex;
 	align-items: center;
 	gap: 15px;
 }
 
-.nav-menu-list {
+.menu-list {
 	display: flex;
 	gap: 20px;
 	list-style: none;
 }
 
-.nav-menu-link {
+.menu-list-link {
 	color: black;
 	text-decoration: none;
 	font-weight: lighter;
@@ -38,7 +38,7 @@
 }
 /* mobile */
 @media only screen and (min-width: 0px) and (max-width: 768px) {
-	.nav-menu-list,
+	.menu-list,
 	.request-quote-btn {
 		display: none;
 	}

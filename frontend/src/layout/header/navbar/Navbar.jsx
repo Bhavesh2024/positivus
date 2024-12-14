@@ -1,30 +1,8 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import { navMenuList } from "../../../utils/navMenuList";
 const Navbar = () => {
-	const navMenuList = [
-		{
-			title: "About Us",
-			redirect: "/about",
-		},
-		{
-			title: "Services",
-			redirect: "/service",
-		},
-		{
-			title: "Use Cases",
-			redirect: "/use-cases",
-		},
-		{
-			title: "Pricing",
-			redirect: "/prices",
-		},
-		{
-			title: "Blog",
-			redirect: "/blog",
-		},
-	];
-
 	return (
 		<>
 			<div className="navbar">
@@ -34,13 +12,13 @@ const Navbar = () => {
 						className="nav-logo"
 					/>
 				</div>
-				<div className="nav-menu-container">
-					<ul className="nav-menu-list">
+				<div className="menu-list-container">
+					<ul className="menu-list">
 						{navMenuList.map((item, index) => (
-							<li className="nav-menu-list-item" key={`${index}`}>
+							<li className="menu-list-item" key={`${index}`}>
 								<Link
 									to={item.redirect}
-									className="nav-menu-link"
+									className="menu-list-link"
 								>
 									{item.title}
 								</Link>

@@ -1,0 +1,131 @@
+.footer{
+  padding:20px 10px;
+  background-color: var(--dark);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-top: 30px;
+  width: 100%;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.footer-nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+.footer  .menu-list-link{
+  color:white;
+  text-decoration: underline;
+  text-decoration-thickness:1px;
+}
+
+.footer-logo{
+  height:40px;
+  width: 120px;
+}
+
+.footer-logo img{
+  height: 100%;
+  width: 100%;
+}
+.social-icons-container{
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon{
+  color:black;
+  background-color: white;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  border-radius: 100%;
+}
+
+.contact-us-container{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin:0 auto;
+  padding-bottom:50px;
+  border-bottom: 1px solid;
+
+}
+.contact-info-content{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width:30%;
+}
+
+.contact-title{
+  /* display: inline-block; */
+  width: fit-content;
+  padding: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.news-letter-form{
+  padding:10px;
+  background-color:#292A32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.news-letter-email{
+  border:1px solid rgb(202, 198, 198);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.news-letter-email::placeholder{
+  color: #c5c5c7;
+  padding-left:15px;
+}
+
+.subscribe-btn{
+  border:transparent;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.copyright-content{
+  width:85%;
+  margin:0 auto;
+  display:flex;
+  gap:30px;
+  font-weight: 300;
+}
+
+/* mobile */
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+	.nav-menu-list,
+	.request-quote-btn {
+		display: none;
+	}
+	.nav-logo {
+		width: 100px;
+	}
+	.menubar {
+		display: block;
+	}
+}
+
+/* tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.nav-menu-list {
+		gap: 15px;
+	}
+}
