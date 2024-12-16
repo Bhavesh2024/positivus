@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { navMenuList } from "../../../utils/navMenuList";
 const Navbar = () => {
+	const [open, setOpen] = useState(false);
+	const listRef = useRef(0);
+	const btnRef = useRef(0);
+	const handleDrawer = (e) => {
+		setOpen(!open);
+	};
+
+	useEffect(() => {
+		if (matchMedia("(max-width:576px)").matches) {
+			btnRef.current.style = `display:${open ? "block" : "none"}`;
+			listRef.current.style = `display:${
+				open ? "flex" : "none"
+			};flex-direction:column`;
+		}
+	}, [open]);
 	return (
 		<>
 			<div className="navbar">
@@ -11,9 +26,13 @@ const Navbar = () => {
 						src="../../../../images/logo/logo-nav.svg"
 						className="nav-logo"
 					/>
+					<i
+						className="fa-solid fa-bars menubar"
+						onClick={handleDrawer}
+					></i>
 				</div>
 				<div className="menu-list-container">
-					<ul className="menu-list">
+					<ul className="menu-list" ref={listRef}>
 						{navMenuList.map((item, index) => (
 							<li className="menu-list-item" key={`${index}`}>
 								<Link
@@ -25,10 +44,13 @@ const Navbar = () => {
 							</li>
 						))}
 					</ul>
-					<button className="request-quote-btn" id="requestQuoteBtn">
+					<button
+						className="request-quote-btn"
+						id="requestQuoteBtn"
+						ref={btnRef}
+					>
 						Request a quote
 					</button>
-					<i className="fa-solid fa-bars menubar"></i>
 				</div>
 			</div>
 		</>

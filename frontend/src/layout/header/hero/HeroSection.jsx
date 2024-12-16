@@ -14,7 +14,7 @@ const HeroSection = () => {
 
 	useEffect(() => {
 		const handleResize = () => {
-			if (window.matchMedia("(max-width: 768px)").matches) {
+			if (window.matchMedia("(max-width:500px)").matches) {
 				console.log("Appending child...");
 				if (heroContainerRef.current && headlineRef.current) {
 					heroContainerRef.current.appendChild(headlineRef.current);

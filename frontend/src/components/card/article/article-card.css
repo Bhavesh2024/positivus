@@ -1,0 +1,23 @@
+.article-card {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-weight: 100;
+	padding: 15px;
+	border-right: 1px solid;
+}
+
+.learn-more-btn {
+	font-size: 1rem;
+	font-weight: 200;
+}
+
+.article-card:last-child {
+	border: none;
+}
+@media only screen and (max-width: 768px) {
+	.article-card {
+		border-right: 0;
+		border-bottom: 1px solid;
+	}
+}

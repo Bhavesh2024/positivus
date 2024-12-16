@@ -61,15 +61,17 @@ const Service = () => {
 	];
 	return (
 		<>
-			<SectionIntro
-				title={serviceSection.title}
-				content={serviceSection.content}
-			/>
-			<div className="service-card-container">
-				{serviceCards.map((item) => (
-					<ServiceCard {...item} />
-				))}
-			</div>
+			<section className="service">
+				<SectionIntro
+					title={serviceSection.title}
+					content={serviceSection.content}
+				/>
+				<div className="service-card-container">
+					{serviceCards.map((item) => (
+						<ServiceCard {...item} />
+					))}
+				</div>
+			</section>
 		</>
 	);
 };

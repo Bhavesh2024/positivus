@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
 import HeroSection from "../hero/HeroSection";
-
+import "./header.css";
 const Header = () => {
 	return (
 		<>
-			<Navbar />
-			<HeroSection />
+			<header className="header">
+				<Navbar />
+				<HeroSection />
+			</header>
 		</>
 	);
 };

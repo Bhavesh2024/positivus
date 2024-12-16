@@ -1,0 +1,14 @@
+.case-studies-article-container {
+	padding: 25px;
+	border-radius: 20px;
+	display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+	.case-studies-article-container {
+		flex-direction: column;
+		gap: 20px;
+		width: 95%;
+		margin: auto;
+	}
+}

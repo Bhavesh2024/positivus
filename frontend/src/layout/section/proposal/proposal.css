@@ -1,0 +1,45 @@
+.proposal-sec {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 60px 0;
+	padding: 20px 40px;
+	position: relative;
+	border-radius: 20px;
+}
+
+.proposal-title {
+	font-size: 1.5rem;
+}
+
+.proposal-content {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 45%;
+}
+
+.proposal-btn {
+	width: fit-content;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+.proposal-image-container {
+	height: 200px;
+}
+.proposal-image {
+	height: 100%;
+	position: absolute;
+	top: -15px;
+	right: 15%;
+}
+
+@media only screen and (max-width: 768px) {
+	.proposal-image {
+		display: none;
+	}
+	.proposal-content {
+		width: 100%;
+	}
+}
